@@ -244,7 +244,48 @@ def main():
         else:
             print('No games scheduled for this day.')
             
+    def find_date():
+        month = input('Enter a month (1-12): ')
+        while month not in list(map(str, list(range(1,12)))):
+            print('Month must be between 1 and 12')
+            month = input('Enter a month (1-12): ')
         
+        if int(month) < 10:
+            month = '0' + month
+
+        if int(month) in [1,3,5,7,8,10,12]:
+            day = input('Enter a day (1-31): ')
+            while day not in list(map(str, list(range(1,32)))):
+                print('Day must be between 1 and 31')
+                day = input('Enter a day (1-31): ')
+
+        
+        elif int(month) in [4,6,9,11]:
+            day = input('Enter a day (1-30): ')
+            while day not in list(map(str, list(range(1,31)))):
+                print('Day must be between 1 and 30')
+                day = input('Enter a day (1-30): ')
+
+        elif int(month) == 2:
+            day = input('Enter a day (1-29): ')
+            while day not in list(map(str, list(range(1,30)))):
+                print('Day must be between 1 and 29')
+                day = input('Enter a day (1-29): ')
+        
+        if int(day) < 10:
+            day = '0' + day
+        
+        date = datetime.strptime(f'2024-{month}-{day}', '%Y-%m-%d')
+        if date < datetime.today():
+            print('Cannot predict games in the past.')
+            next = input('Press any key to try again, or hit q to quit: ')
+            if next == 'q':
+                quit
+            else:
+                os.system('clear')
+                return find_date()
+        else:
+            return date
 
     print('Welcome to the MLB Games Predictor!')
     print('1. Generate all predictions for a certain date')
@@ -253,14 +294,7 @@ def main():
     num = int(input('Pick from one of the above options: '))
     
     if num == 1:
-        month = input('Enter a month (1-12): ')
-        if int(month) < 10:
-            month = '0' + month
-        day = input('Enter a day: ')
-        if int(day) < 10:
-            day = '0' + day
-        
-        date = datetime.strptime(f'2024-{month}-{day}', '%Y-%m-%d')
+        date = find_date()
         schedule = statsapi.schedule(date=date.date())
         prediction(date=date, schedule=schedule)
         
@@ -272,14 +306,7 @@ def main():
             main()
     
     if num == 2:
-        month = input('Enter a month (1-12): ')
-        if int(month) < 10:
-            month = '0' + month
-        day = input('Enter a day: ')
-        if int(day) < 10:
-            day = '0' + day
-        
-        date = datetime.strptime(f'2024-{month}-{day}', '%Y-%m-%d')
+        date = find_date()
         team=statsapi.lookup_team(lookup_value=input('Enter a team name (home or away): '), season=2024)[0]['id']
         schedule = statsapi.schedule(date=date.date(), team=team)
         prediction(date=date, schedule=schedule)
@@ -294,7 +321,7 @@ def main():
     if num == 3:
         team=statsapi.lookup_team(lookup_value=input('Enter a team name (home or away): '), season=2024)[0]['id']
         schedule = statsapi.schedule(start_date=datetime.today().date(), end_date='2024-12-31', team=team)
-        
+
         for game in schedule:
             prediction(date=datetime.strptime(game['game_date'], '%Y-%m-%d'), schedule=[game])
         
