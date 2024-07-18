@@ -287,13 +287,12 @@ def main():
         else:
             return date
 
-    print('Welcome to the MLB Games Predictor!')
     print('1. Generate all predictions for a certain date')
     print('2. Generate a prediction for a single game')
     print('3. Generate predictions for a certain team for the rest of the season')
-    num = int(input('Pick from one of the above options: '))
+    num = input('Pick from one of the above options: ')
     
-    if num == 1:
+    if num == '1':
         date = find_date()
         schedule = statsapi.schedule(date=date.date())
         prediction(date=date, schedule=schedule)
@@ -305,7 +304,7 @@ def main():
             os.system('clear')
             main()
     
-    if num == 2:
+    if num == '2':
         date = find_date()
         team=statsapi.lookup_team(lookup_value=input('Enter a team name (home or away): '), season=2024)[0]['id']
         schedule = statsapi.schedule(date=date.date(), team=team)
@@ -318,7 +317,7 @@ def main():
             os.system('clear')
             main()
 
-    if num == 3:
+    if num == '3':
         team=statsapi.lookup_team(lookup_value=input('Enter a team name (home or away): '), season=2024)[0]['id']
         schedule = statsapi.schedule(start_date=datetime.today().date(), end_date='2024-12-31', team=team)
 
@@ -331,6 +330,12 @@ def main():
         else:
             os.system('clear')
             main()
+
+    else:
+        print('Invalid option.')
+        main()
+
     
 if __name__ == "__main__":
+    print('Welcome to the MLB Games Predictor!')
     main()
