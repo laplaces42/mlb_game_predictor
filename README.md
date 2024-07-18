@@ -40,7 +40,27 @@ Welcome to the MLB Game Predictor! This project leverages advanced machine learn
    ```bash
    python baseball_model.py
    ```
-3. Run [`baseball_prediction.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_prediction.py) to run the program and request game predictions
+3. Run [`baseball_prediction.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_prediction.py) to run the main program and request game predictions
    ```bash
    python baseball_prediction.py
    ```
+
+## Results
+The results of this project can be used when the [`baseball_prediction.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_prediction.py) script is run.
+
+## Contributions
+I am open to all (relevant) contributions! To do so, please fork the repository and submit a pull request with your changes. 
+
+## License
+TBD
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out!
+
+- **Email:** [laplace.sallis@gmail.com](mailto:laplace.sallis@gmail.com)
+- **LinkedIn:** [LaPlace Sallis IV](https://www.linkedin.com/in/laplace-sallis-iv-bbbb602a8/)
+- **GitHub:** [laplaces42](https://github.com/laplaces42)
+
+You can also open an issue on this repository if you have any questions or need support.
+
