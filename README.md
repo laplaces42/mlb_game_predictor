@@ -26,33 +26,33 @@ Welcome to the MLB Game Predictor! This project leverages advanced machine learn
    ```bash
    code . #For VSCode
    ```
-3. **Install [`requirements.txt`](https://github.com/laplaces42/mlb_game_predictor/blob/main/requirements.txt)**
+3. **Install [`requirements.txt`](requirements.txt)**
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Usage
-1. Run [`baseball_dataset.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_dataset.py) to update the dataset with any recent statistics
+1. Run [`baseball_dataset.py`](baseball_dataset.py) to update the dataset with any recent statistics
    ```bash
    python baseball_dataset.py
    ```
-2. Run [`baseball_model.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_model.py) to train the models with the new data
+2. Run [`baseball_model.py`](baseball_model.py) to train the models with the new data
    ```bash
    python baseball_model.py
    ```
-3. Run [`baseball_prediction.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_prediction.py) to run the main program and request game predictions
+3. Run [`baseball_prediction.py`](baseball_prediction.py) to run the main program and request game predictions
    ```bash
    python baseball_prediction.py
    ```
 
 ## Results
-The results of this project can be used when the [`baseball_prediction.py`](https://github.com/laplaces42/mlb_game_predictor/blob/main/baseball_prediction.py) script is run.
+The results of this project can be used when the [`baseball_prediction.py`](baseball_prediction.py) script is run.
 
 ## Contributions
 I am open to all (relevant) contributions! To do so, please fork the repository and submit a pull request with your changes. 
 
 ## License
-TBD
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
