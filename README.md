@@ -1,11 +1,11 @@
 # MLB Game Predictor
-Welcome to the MLB Game Predictor! This project leverages advanced machine learning models to predict the outcomes of MLB games during the 2024 season. The primary aim is to provide accurate game-by-game predictions and season-long projections using a comprehensive set of historical data.
+Welcome to the MLB Game Predictor! This project leverages advanced machine learning models to predict the outcomes of MLB games during the 2024 season. The primary aim is to provide accurate game-by-game predictions and season-long projections using a comprehensive historical dataset.
 
 ## Key Features
-- **Historical Data Utilization:** The models are trained on an extensive dataset that includes team statistics from nearly every game between the 2000 and 2024 seasons and is continuously being updated. This ensures that there is a sufficient amount of data for the models to understand patterns between statistics and outcomes.
+- **Historical Data Utilization:** The models are trained on an extensive dataset that includes team statistics from nearly every game between the 2000 and 2024 seasons and is continuously updated. This ensures that there is a sufficient amount of data for the models to understand patterns between statistics and outcomes.
 - **Comprehensive Team Statistics:** The dataset includes a wide range of team statistics that cover almost every aspect of a baseball game. These encompass both offensive and defensive statistics, as well as season-wide and recent performance for each team.
-- **Machine Learning Models:** This project uses Ridge Classifier and Linear Regression models to predict the outcome and scores of games. After testing various models for both outcome and run prediction, these models consistenly performed.
-- **Future Statistic Prediction:** This project includes the functionality to predict the statistics for any upcoming game from now until the end of the season using exponential moving averages and past team performance. This allows the model's predictive ability to not be limited to games it has concrete statistics for.
+- **Machine Learning Models:** This project uses Ridge Classifier and Linear Regression models to predict the outcome and scores of games. After testing various models for both outcome and run prediction, these models consistently performed.
+- **Future Statistic Prediction:** This project includes the functionality to predict the statistics for any upcoming game from now until the end of the season using exponential moving averages and past team performance. This allows the model's predictive ability to not be limited to games, for it has concrete statistics.
 
 ## Data Sources
 - [FanGraphs](https://www.fangraphs.com/leaders/major-league) for web scraping all necessary team statistics
@@ -27,4 +27,20 @@ Welcome to the MLB Game Predictor! This project leverages advanced machine learn
    code . #For VSCode
    ```
 3. **Install `requirements.txt`**
-4. 
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+1. Run `baseball_dataset.py` to update the dataset with any recent statistics
+   ```bash
+   python baseball_dataset.py
+   ```
+2. Run `baseball_model.py` to train the models with the new data
+   ```bash
+   python baseball_model.py
+   ```
+3. Run `baseball_prediction.py` to run the program and request game predictions
+   ```bash
+   python baseball_prediction.py
+   ```
