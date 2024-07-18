@@ -10,3 +10,21 @@ Welcome to the MLB Game Predictor! This project leverages advanced machine learn
 ## Data Sources
 - [FanGraphs](https://www.fangraphs.com/leaders/major-league) for web scraping all necessary team statistics
 - [MLB-StatsAPI](https://github.com/toddrob99/MLB-StatsAPI) for finding schedules for given date ranges
+
+## Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/laplaces42/mlb_game_predictor.git
+   cd mlb_game_predictor
+   ```
+2. **Start a virtual environment**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+3. **Open an IDE (Optional)**
+   ```bash
+   code . #For VSCode
+   ```
+3. **Install `requirements.txt`**
+4. 
