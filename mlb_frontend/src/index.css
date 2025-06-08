@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.header {
+  width: 100%;
+  background-color: #0d1321;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+  
+.recent-games {
+  width: 40%;
+
+}
+
+.todays-games {
+  width: 60%;
+}
+/* GameView Section Styling - Modern, Clean, and Subtle */
+.game-view {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin: 2.5rem 0 1.5rem 0;
+  padding: 20px;
+  background: none;
+  width: 100%;
+}
+
+.recent-games, .todays-games {
+  background: #f0f4f8;
+  color: #222c3a;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(34,44,58,0.08);
+  /* padding: 2.2rem 2rem 1.5rem 2rem; */
+  padding: 20px;
+  /* min-width: 300px;
+  max-width: 370px; */
+  /* width: 100%; */
+  /* margin: 0 0.5rem; */
+  border: 1px solid #e3e8ee;
+}
+
+.recent-games h2, .todays-games h2 {
+  font-size: 1.35rem;
+  margin: 0;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #1a3a5d;
+  font-weight: 600;
+}
+
+.recent-games p, .todays-games p {
+  font-size: 1.08rem;
+  color: #4a5a6a;
+  margin: 0.5rem 0 0 0;
+}
+
+@media (max-width: 900px) {
+  .game-view {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .recent-games, .todays-games {
+    max-width: 98vw;
+    min-width: unset;
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+}
+
+.standings {
+  width: 100%;
+  padding: 20px;
+}
+
+.standings-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  border: 1px solid #e3e8ee;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(34,44,58,0.08);
+}
+
+.standings-container h2 {
+  font-size: 1.35rem;
+  margin: 0;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #1a3a5d;
+  font-weight: 600;
+}
+
+.standings-container p {
+  font-size: 1.08rem;
+  color: #4a5a6a;
+  margin: 0.5rem 0 0 0;
+}
+
+.al-standings, .nl-standings {
+  display: flex;
+  /* flex-direction: column; */
+  /* gap: 1.5rem; */
+  margin-bottom: 2rem;
+}
+
+.standings-panel {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(34,44,58,0.08);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-top: 2rem;
+  border: 1px solid #e3e8ee;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.standings-panel h3 {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  font-size: 1.25rem;
+  color: #1a3a5d;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.standings-table th, .standings-table td {
+  padding: 0.6rem 0.4rem;
+  text-align: center;
+}
+
+.standings-table th {
+  background: #f0f4f8;
+  color: #1a3a5d;
+  font-weight: 600;
+  border-bottom: 2px solid #e3e8ee;
+  font-size: 1.05rem;
+}
+
+.standings-table td {
+  border-bottom: 1px solid #e3e8ee;
+  color: #2a3a4d;
+  font-size: 1rem;
+}
+
+.standings-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .standings-panel {
+    padding: 1rem 0.3rem 0.7rem 0.3rem;
+    max-width: 98vw;
+  }
+  .standings-table th, .standings-table td {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.95rem;
+  }
+}
