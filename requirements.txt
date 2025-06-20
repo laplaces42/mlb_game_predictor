@@ -19,5 +19,5 @@ soupsieve==2.5
 statistics==1.0.3.5
 threadpoolctl==3.5.0
 tzdata==2024.1
-urllib3==2.2.2
+urllib3==2.5.0
 zope.interface==6.4.post2
